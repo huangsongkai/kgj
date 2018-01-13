@@ -21,7 +21,7 @@ public class UserController{
     public Response login(@RequestBody UserDTO userDTO, HttpServletRequest request, HttpServletResponse response) {
         System.out.println();
         if (userDTO.getPassword().equals("admin") && userDTO.getUsername().equals("admin")) {
-            Cookie cookie = new Cookie("token", ""+System.currentTimeMillis());
+            Cookie cookie = new Cookie("token", "{id:1, deadline:"+System.currentTimeMillis()+"}");
             cookie.setMaxAge(900000);
             response.addCookie(cookie);
             return new Response("200");
@@ -36,6 +36,7 @@ public class UserController{
         }
         return new Response("200");
     }
+
 
     @Data
     @AllArgsConstructor
