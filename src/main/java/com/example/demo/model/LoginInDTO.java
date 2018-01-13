@@ -1,6 +1,7 @@
 package com.example.demo.model; /**
  * Copyright 2018 bejson.com
  */
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -10,6 +11,7 @@ import lombok.Data;
  * @website http://www.bejson.com/java2pojo/
  */
 @Data
+@AllArgsConstructor
 public class LoginInDTO {
      Boolean success;
      User user;

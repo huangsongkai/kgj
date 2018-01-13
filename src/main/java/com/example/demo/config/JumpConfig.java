@@ -11,8 +11,9 @@ public class JumpConfig extends WebMvcConfigurerAdapter {
     }
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/front/*").setViewName("index");//跳转注册页面
-        registry.addViewController("/login").setViewName("index");//跳转注册页面
-        registry.addViewController("/").setViewName("index");//跳转注册页面
+        registry.addViewController("/front/*").setViewName("index");
+        registry.addViewController("/login").setViewName("index");
+        registry.addViewController("/error/*").setViewName("index");
+        registry.addViewController("/").setViewName("index");
     }
 }
